@@ -41,17 +41,18 @@ public class CalculatorTest {
 
     @Test
     public void testSubtract() {
-        assertEquals(calculator.subtract(10, 5), 5);
+        assertEquals(calculator.subtract(10, 5), 5, "This test failed");
+
     }
 
     @Test
     public void testMultiply() {
-        assertEquals(calculator.multiply(3, 4), 12);
+        assertEquals(calculator.multiply(3, 4), 12, "This test failed");
     }
 
     @Test(dependsOnMethods = "testMultiply")
     public void testDivide() {
-        assertEquals(calculator.divide(10, 2), 5);
+        assertEquals(calculator.divide(10, 2), 5, "This test failed");
     }
 
     @Test(expectedExceptions = IllegalArgumentException.class)
